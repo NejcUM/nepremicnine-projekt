@@ -25,12 +25,10 @@ jobs:
         id: vars
         run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
 
-      - name: Build and push
+      - name: Build only (test)
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
-          push: true
-          tags: |
-            nejchd/nepremicnine-projekt:latest
-            nejchd/nepremicnine-projekt:${{ steps.vars.outputs.SHORT_SHA }}
+          push: false
+          tags: nejcHD/nepremicnine-projekt:test
