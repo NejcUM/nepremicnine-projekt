@@ -32,5 +32,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            lukapuhmeister/rgis-nepremicnine:latest
-            lukapuhmeister/rgis-nepremicnine:${{ steps.vars.outputs.SHORT_SHA }}
+            ngicHD/nepremicnine-projekt:latest
+            ngicHD/nepremicnine-projekt:${{ steps.vars.outputs.SHORT_SHA }}
